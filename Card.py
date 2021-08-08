@@ -1,4 +1,6 @@
-# card object has name (string), value (int), rank , suit, color (black/red suit) - bool true for black, false for red(value could be 10 for face cards, where as rank would be king > queen > jack)
+# card object has name (string), value (int), rank (int), suit, color (black/red suit) - bool true for black, false for red
+# (value could be 10 for face cards, where as rank would be ace > king > queen > jack)
+# player number describes which player the card belongs to. player one is 1, the deck is 0
 class Card:
     value: int
     color: bool
@@ -10,11 +12,12 @@ class Card:
         self.suit = suit
         self.color = color
         self.next = next
-
+        self.playerNumber = 0
 
     #setters and getters
     def getName(self):
         return self.name
+
     def setName(self, name):
         self.name = name
 
